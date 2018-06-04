@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CDTHealessProj
+Bundle-SymbolicName: CDTHealessProj;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: cdt.headless.proj.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.12.0",
+ org.eclipse.cdt.core;bundle-version="6.4.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: CDTHealessProj
+Bundle-ActivationPolicy: lazy
