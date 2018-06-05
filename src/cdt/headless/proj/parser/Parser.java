@@ -12,7 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.cdt.core.CCorePlugin;
+import org.eclipse.cdt.core.dom.ast.IScope;
 import org.eclipse.cdt.core.index.IIndex;
+import org.eclipse.cdt.core.index.IIndexFile;
 import org.eclipse.cdt.core.index.IIndexManager;
 import org.eclipse.cdt.core.model.CModelException;
 import org.eclipse.cdt.core.model.CoreModel;
@@ -130,6 +132,44 @@ public class Parser {
         configIndexer(cproject);
 		computeIndex(cproject);
 
+		System.out.println("getAllFiles");
+		try {
+			IIndexFile[] iIndexFiles = index.getAllFiles();
+			for (int i = 0; i < iIndexFiles.length; i++) {
+				System.out.println(iIndexFiles[i].toString());
+			}
+		} catch (CoreException e) {
+			
+		}
+		
+		System.out.println("getFilesWithUnresolvedIncludes");
+		
+		try {
+			IIndexFile[] iIndexFiles = index.getFilesWithUnresolvedIncludes();
+			for (int i = 0; i < iIndexFiles.length; i++) {
+				System.out.println(iIndexFiles[i].toString());
+			}
+		} catch (CoreException e) {
+			
+		}
+		
+		System.out.println("getInlineNamespaces");
+		try {
+			IScope[] iScopes = index.getInlineNamespaces();
+			for (int i = 0; i < iScopes.length; i++) {
+				System.out.println(iScopes[i].toString());
+			}
+		} catch (CoreException e) {
+			// TODO: handle exception
+		}
+		
+		
+		try {
+			cproject.accept(new MyVisitor());
+		} catch (CoreException e) {
+			// TODO: handle exception
+		}
+		
         return true;
 	}
 
