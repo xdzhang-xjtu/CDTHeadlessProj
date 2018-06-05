@@ -122,7 +122,7 @@ public class Parser {
 	}
 
 	public boolean parse() {
-		ICProject cproject = createEclipseProject("ecpro", "/Users/zhangxiaodong10/test/cpptest");
+		ICProject cproject = createEclipseProject("ecpro", userProjectDir);
 		if (cproject == null) {
         	// could not create the project :-(
         	return false;
