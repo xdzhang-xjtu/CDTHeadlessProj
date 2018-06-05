@@ -132,36 +132,36 @@ public class Parser {
         configIndexer(cproject);
 		computeIndex(cproject);
 
-		System.out.println("getAllFiles");
-		try {
-			IIndexFile[] iIndexFiles = index.getAllFiles();
-			for (int i = 0; i < iIndexFiles.length; i++) {
-				System.out.println(iIndexFiles[i].toString());
-			}
-		} catch (CoreException e) {
-			
-		}
-		
-		System.out.println("getFilesWithUnresolvedIncludes");
-		
-		try {
-			IIndexFile[] iIndexFiles = index.getFilesWithUnresolvedIncludes();
-			for (int i = 0; i < iIndexFiles.length; i++) {
-				System.out.println(iIndexFiles[i].toString());
-			}
-		} catch (CoreException e) {
-			
-		}
-		
-		System.out.println("getInlineNamespaces");
-		try {
-			IScope[] iScopes = index.getInlineNamespaces();
-			for (int i = 0; i < iScopes.length; i++) {
-				System.out.println(iScopes[i].toString());
-			}
-		} catch (CoreException e) {
-			// TODO: handle exception
-		}
+//		System.out.println("getAllFiles");
+//		try {
+//			IIndexFile[] iIndexFiles = index.getAllFiles();
+//			for (int i = 0; i < iIndexFiles.length; i++) {
+//				System.out.println(iIndexFiles[i].toString());
+//			}
+//		} catch (CoreException e) {
+//			
+//		}
+//		
+//		System.out.println("getFilesWithUnresolvedIncludes");
+//		
+//		try {
+//			IIndexFile[] iIndexFiles = index.getFilesWithUnresolvedIncludes();
+//			for (int i = 0; i < iIndexFiles.length; i++) {
+//				System.out.println(iIndexFiles[i].toString());
+//			}
+//		} catch (CoreException e) {
+//			
+//		}
+//		
+//		System.out.println("getInlineNamespaces");
+//		try {
+//			IScope[] iScopes = index.getInlineNamespaces();
+//			for (int i = 0; i < iScopes.length; i++) {
+//				System.out.println(iScopes[i].toString());
+//			}
+//		} catch (CoreException e) {
+//			// TODO: handle exception
+//		}
 		
 		
 		try {
