@@ -1,7 +1,8 @@
 Usage
 ###########
 
-It is an example for headless eclipse application, which invokes the api from CDT or JDT.
+It is an example for headless eclipse application, which invokes the api from CDT. 
+This program implements the bindings building of a Cpp project. 
 The approach to build a headless eclipse application is in website https://wiki.eclipse.org/FAQ_How_do_I_create_an_application%3F 
 Import this project into eclipse as a plug-in project. Export as a deployable plug-in project. Copy the generated plug-in jar into the dir plugins of eclipse application.
 
